@@ -3,7 +3,7 @@
 	<head>
 		<title>Share-it</title>
 		<link rel=icon href="../static/favicon.ico">
-		<link rel=stylesheet type=text/css href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel=stylesheet type=text/css href="../static/css/bootstrap.css">
 		<link rel=stylesheet type=text/css href="../static/css/styles.css">
 	</head>
 	<body>
@@ -18,13 +18,13 @@
 			</h1>
 			<div class="row">
 				<div class="col-md-12">
-					<form class = "form-container" enctype="multipart/form-data" method="POST">
-						<label for="uploadbar">Select file(s) to send<br></label>
-						<input type="file" name="file1" id="uploadbar">
-						<input type="file" name="file2" id="uploadbar">
-						<input type="file" name="file3" id="uploadbar">
-						<input type="file" name="file4" id="uploadbar">
-						<input type="file" name="file5" id="uploadbar">
+					<form enctype="multipart/form-data" method="POST">
+						<label for="uploadbar">Select file(s) to send</label><br>
+						<input type="file" name="file1" id="uploadbar"><br>
+						<input type="file" name="file2" id="uploadbar"><br>
+						<input type="file" name="file3" id="uploadbar"><br>
+						<input type="file" name="file4" id="uploadbar"><br>
+						<input type="file" name="file5" id="uploadbar"><br>
 						<br><br>
 						<input type="submit" value="Send">
 					</form>
