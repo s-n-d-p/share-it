@@ -1,0 +1,42 @@
+html, body {
+    height: 100%;
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+head {
+    display: none;
+}
+
+.container-fluid {
+    height: calc(100% - 71px);
+    /*margin-top: 71px;*/
+}
+/*
+.bg-image{
+	background-image: url(../dog.jpeg);
+	position: fixed;
+    overflow: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+}*/
+
+.bg{
+	/* The image used */
+	background-image: url(../dog.jpg);
+
+	/* Full height */
+	height: 100%;
+	overflow: auto;
+
+	/* Center and scale the image nicely */
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;	
+}

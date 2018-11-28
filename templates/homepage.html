@@ -2,12 +2,45 @@
 <html>
 	<head>
 		<title>Share-it</title>
+		<link rel=icon href="../static/favicon.ico">
+		<link rel=stylesheet type=text/css href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel=stylesheet type=text/css href="../static/css/styles.css">
 	</head>
 	<body>
-		<form enctype="multipart/form-data" method="POST">
-			<label for="uploadbar">Select file(s) to send<br></label>
-			<input type="file" name="file" id="uploadbar"><br>
-			<input type="submit" value="Send">
-		</form>
+		<div class="container-fluid bg">
+			<h1 class="row">
+				<div class="col-md-12 text-right text-light">
+					Share-It
+				</div>
+				<div class="col-md-12">
+					<hr>
+				</div>
+			</h1>
+			<div class="row">
+				<div class="col-md-12">
+					<form class = "form-container" enctype="multipart/form-data" method="POST">
+						<label for="uploadbar">Select file(s) to send<br></label>
+						<input type="file" name="file1" id="uploadbar">
+						<input type="file" name="file2" id="uploadbar">
+						<input type="file" name="file3" id="uploadbar">
+						<input type="file" name="file4" id="uploadbar">
+						<input type="file" name="file5" id="uploadbar">
+						<br><br>
+						<input type="submit" value="Send">
+					</form>
+				</div>
+			</div>
+			<!-- {% with messages = get_flashed_messages() %}
+				{% if messages %}
+				<div class="row">
+					<div class="col-md-12">
+					{% for message in messages %}
+						{{message}}
+					{% endfor %}
+					</div>
+				</div>
+				{% endif %}
+			{% endwith %} -->
+		</div>
 	</body>
 </html>
