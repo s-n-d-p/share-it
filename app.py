@@ -4,13 +4,14 @@ import os, sys
 app = Flask(__name__)
 
 UPLOAD_FOLDER = '/home/s4nd33p/Downloads/share-it'
+PASSWORD = "setYourPasswordHere"
 
 @app.route("/",methods = ['GET','POST'])
 def homepage():
 	if request.method == 'GET':	
 		return render_template("login.html")
 	else:
-		if ("password" in request.form) and (request.form["password"] == "shareit"):
+		if ("password" in request.form) and (request.form["password"] == PASSWORD):
 			return render_template("homepage.html")
 		else:
 			flash("Invalid password!")

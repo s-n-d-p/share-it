@@ -18,18 +18,10 @@ head {
     height: calc(100% - 71px);
     /*margin-top: 71px;*/
 }
-/*
-.bg-image{
-	background-image: url(../dog.jpeg);
-	position: fixed;
-    overflow: auto;
-    background-size: cover;
-    background-repeat: no-repeat;
-}*/
 
 .bg{
 	/* The image used */
-	background-image: url(../dog.jpeg);
+	background-image: url(../bg.jpeg);
 
 	/* Full height */
 	height: 100%;
