@@ -29,15 +29,15 @@
 			{% endwith %}
 			<div class="row">
 				<div class="col-md-12">
-					<form action="/upload" enctype="multipart/form-data" method="POST">
-						<label for="uploadbar">Select file(s) to send</label><br>
-						<input type="file" name="file1" id="uploadbar"><br>
-						<input type="file" name="file2" id="uploadbar"><br>
-						<input type="file" name="file3" id="uploadbar"><br>
-						<input type="file" name="file4" id="uploadbar"><br>
-						<input type="file" name="file5" id="uploadbar"><br>
-						<br><br>
-						<input type="submit" value="Send">
+					<form action="/" method="post">
+						<div>
+						    <label for="password">Password:</label>
+						    <input type="password" id="password" name="password">
+						</div>
+						<!-- <label for="uploadbar">Select file(s) to send</label><br> -->
+						<!-- <input type="file" name="file5" id="uploadbar"><br> -->
+						<!-- <br><br> -->
+						<input type="submit" value="Sign in">
 					</form>
 				</div>
 			</div>
