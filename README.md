@@ -37,6 +37,7 @@ To make life even geekier, set the aliases like so:
 2. Then create a .bash_aliases file in home directory with the following content:
 
     `alias send="python3 -m http.server 8000"`
+    
     `alias recv="python /home/sandeep/repos/share-it/app.py"`
 
 3. Restart your terminal, or do
