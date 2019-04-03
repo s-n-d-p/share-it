@@ -3,7 +3,7 @@ import os, sys
 
 app = Flask(__name__)
 
-UPLOAD_FOLDER = '/home/s4nd33p/Downloads/share-it'
+UPLOAD_FOLDER = 'setYourUploadFolderHere'
 PASSWORD = "setYourPasswordHere"
 
 @app.route("/",methods = ['GET','POST'])
