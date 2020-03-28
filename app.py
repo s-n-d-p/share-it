@@ -3,8 +3,9 @@ import os, sys
 
 app = Flask(__name__)
 
-UPLOAD_FOLDER = 'setYourUploadFolderHere'
-PASSWORD = "setYourPasswordHere"
+# global variables (seriously?)
+UPLOAD_FOLDER = None
+PASSWORD = None
 
 @app.route("/",methods = ['GET','POST'])
 def homepage():
@@ -32,12 +33,21 @@ def upload():
 
 def main():
 	port = int(os.environ.get("PORT", 8000))
-	app.debug = True
-	app.secret_key = 'thequickbrownfoxjumpsoverthelazydog'
+#	app.debug = True
+#	app.secret_key = 'thequickbrownfoxjumpsoverthelazydog'
 	app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 	app.run(host = "0.0.0.0", port = port)
 
 if __name__ == "__main__":
 	if len(sys.argv) > 1 and os.path.isdir(sys.argv[1]):
-		UPLOAD_FOLDER = os.path.abspath(sys.argv[1])
+		UPLOAD_FOLDER = sys.argv[1]
+	elif os.environ.get('UPLOAD_FOLDER') != None:
+		UPLOAD_FOLDER = os.environ.get('UPLOAD_FOLDER')
+	else:
+		UPLOAD_FOLDER = '.'
+	UPLOAD_FOLDER = os.path.abspath(UPLOAD_FOLDER)
+	if os.environ.get('PASSWORD') != None:
+		PASSWORD = os.environ.get('PASSWORD')
+	else:
+		PASSWORD = "muggle"
 	main()
