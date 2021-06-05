@@ -34,7 +34,7 @@ def upload():
 def main():
 	port = int(os.environ.get("PORT", 8000))
 #	app.debug = True
-#	app.secret_key = 'thequickbrownfoxjumpsoverthelazydog'
+	app.secret_key = 'thequickbrownfoxjumpsoverthelazydog'
 	app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 	app.run(host = "0.0.0.0", port = port)
 
